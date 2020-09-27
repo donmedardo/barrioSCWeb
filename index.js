@@ -1,5 +1,5 @@
 const express = require('express');
-//servidor de node para angular
+//servidor de node
 const app = express();
 
 app.use(express.static('./dist/barrioSC'));
