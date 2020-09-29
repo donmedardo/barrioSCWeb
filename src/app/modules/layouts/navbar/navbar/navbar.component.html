@@ -1,13 +1,61 @@
-<p>
-    <mat-toolbar>
-        <mat-toolbar-row>
-        <div >
-            <a mat-button routerLink="/">Home   </a>
-            <a mat-button routerLink="/noticias">Noticias</a>
-            <a mat-button routerLink="/negocios">Negocios</a>
-            <a mat-button routerLink="/directiva">Directiva</a>
-            <a mat-button routerLink="/historia">Historia</a>
-          </div>
-        </mat-toolbar-row>
-    </mat-toolbar>
-  </p>
+<mat-toolbar color="primary" >
+    <span>Barrio Salvador Celi</span>
+    <span class="fill-space"></span>
+
+    <div fxShow="true" fxHide.xs >
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+        <a  mat-button routerLink="/">Home </a>
+        <a  mat-button routerLink="/noticias">Noticias</a>
+        <a  mat-button routerLink="/negocios">Negocios</a>
+        <a  mat-button routerLink="/directiva">Directiva</a>
+        <a  mat-button routerLink="/historia">Historia</a>
+    </div>
+    <a mat-icon-a [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs>
+        <mat-icon>more_vert</mat-icon>
+    </a>
+
+</mat-toolbar>
+
+<mat-menu #dropMenu="matMenu">
+    <ng-container>
+        <a  mat-menu-item routerLink="/">Home </a>
+        <a  mat-menu-item routerLink="/noticias">Noticias</a>
+        <a  mat-menu-item routerLink="/negocios">Negocios</a>
+        <a  mat-menu-item routerLink="/directiva">Directiva</a>
+        <a  mat-menu-item routerLink="/historia">Historia</a>
+        <mat-divider></mat-divider>
+    </ng-container>
+</mat-menu>
+
+
+<!--<mat-sidenav-container fxFlexFill >
+        <mat-sidenav #sidenav>
+            <mat-nav-list>
+                <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+                <a mat-list-item routerLink="/">Home </a>
+                <a mat-list-item routerLink="/noticias">Noticias</a>
+                <a mat-list-item routerLink="/negocios">Negocios</a>
+                <a mat-list-item routerLink="/directiva">Directiva</a>
+                <a mat-list-item routerLink="/historia">Historia</a>
+            </mat-nav-list>
+           
+            
+        </mat-sidenav>
+        <mat-sidenav-content fxFlexFill>
+            <mat-toolbar>
+
+                <mat-toolbar-row>
+                    <a mat-icon-a (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+                        <mat-icon>menu</mat-icon>
+                    </a>
+                    <div fxShow="true" fxHide.lt-md>
+                        <a mat-a routerLink="/">Home </a>
+                        <a mat-a routerLink="/noticias">Noticias</a>
+                        <a mat-a routerLink="/negocios">Negocios</a>
+                        <a mat-a routerLink="/directiva">Directiva</a>
+                        <a mat-a routerLink="/historia">Historia</a>
+                    </div>
+                </mat-toolbar-row>
+            </mat-toolbar>
+        </mat-sidenav-content>
+    </mat-sidenav-container>-->

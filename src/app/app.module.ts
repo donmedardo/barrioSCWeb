@@ -10,9 +10,16 @@ import {HomeModule } from './modules/home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+
 import { NegociosComponent } from './modules/negocios/negocios.component';
 import { HistoriaComponent } from './modules/historia/historia.component';
 import { DirectivaComponent } from './modules/directiva/directiva.component';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -30,7 +37,14 @@ import { DirectivaComponent } from './modules/directiva/directiva.component';
     HomeModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatMenuModule,
+    MatDividerModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
